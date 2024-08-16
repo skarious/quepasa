@@ -92,29 +92,21 @@ Migração de banco de dados sqlite para Postgres
 
 ### Criando Banco de dados Usuario e Senha
 
-```bash
-sudo -i -u postgres psql
-```
+
 
 Defina uma senha segura para acesso ao banco de dados
-
 ```bash
+sudo -i -u postgres psql
+
+
 CREATE ROLE n8n_user WITH LOGIN PASSWORD 'SenhaAqui';
-```
 
-```bash
 CREATE DATABASE n8n_db;
-```
 
-```bash
 GRANT ALL PRIVILEGES ON DATABASE n8n_db TO n8n_user;
-```
 
-```bash
 GRANT CONNECT ON DATABASE n8n_db TO n8n_user;
-```
 
-```bash
 \q
 ```
 
